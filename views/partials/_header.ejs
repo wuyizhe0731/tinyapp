@@ -2,5 +2,19 @@
 <html lang="en">
 <head>
   <title>TinyApp</title>
+  <%= username%>
 </head>
+<body>
+
+	<form  action="/login" method="POST">
+  	<input type="text" name= "username" >
+  	<input type="submit" value ="login">
+
+
+
+
+	<form  action="/logout" method="POST">
+  	<input type="submit" value ="logout">
+  </form>
+</body>
 </html>
