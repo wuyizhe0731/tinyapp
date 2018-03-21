@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<header></header>><% include ./partials/_header.ejs%></header>
+</head>
+<body>
+	<% Object.keys(urls).forEach(function (key) { %>
+	<li><a href="/urls/<%=key%>"><%= key %> --- <%= urls[key] %>  </a></li> 
+	<form method="POST" action="/urls/<%=key%>/delete">
+		<input type="submit" name="delete">
+	</form>
+	<% }) %>
+</body>
+</html>
