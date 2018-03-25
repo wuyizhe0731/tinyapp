@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<header></header>><% include ./partials/_header.ejs%></header>
+<% include ./partials/_header.ejs%>
 </head>
 <body>
-	<% Object.keys(urls).forEach(function (key) { %>
-	<li><a href="/urls/<%=key%>"><%= key %> --- <%= urls[key] %>  </a></li> 
+	<% for (key in urls) { %>
+
+	<li><a href="/urls/<%=key%>"><%= key %> --- <%= urls[key].fullURL %> </a></li> 
 	<form method="POST" action="/urls/<%=key%>/delete">
-		<input type="submit" name="delete">
+		<input type="submit" name="delete" value="delete"></input>
 	</form>
-	<% }) %>
+	<% } %>
+	<a href="/urls/new">add new url</a>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	</header>><% include ./partials/_header.ejs%>
+	<% include ./partials/_header.ejs%>
 </head>
 <body>
 	<p>SHORTURL : <%=shortURL%></p>
@@ -10,7 +10,8 @@
     <label for="name">NEW URL</label>
     <input id="name" type="text" name="newurl">
 
-    <button type="submit">Update</button>
+    <button type="submit">Update</button><br>
+    <a href="/urls">Back to urls list</a>
 </form>    
 </body>
 </html>

@@ -4,6 +4,13 @@ var urlDatabase = {
 };
 urlDatabase["9sm5xK"] = "abc.com"
 
+var element = {}, cart = [];
+element.id = ""abcid"";
+element.quantity = 111;
+cart.push(element);
+console.log(element)
+
+
 console.log(urlDatabase)
 
 
