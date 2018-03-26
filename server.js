@@ -124,7 +124,7 @@ app.post("/urls", (req, res) => {
 //page -- url/short
 app.get("/urls/:id", (req, res) => {
   let templateVars = { shortURL: req.params.id,
-                       fullURL:urlDatabase[req.params.id],
+                       fullURL:urlDatabase[req.params.id].fullURL,
                        email: req.session.email};
   res.render("urls_show", templateVars);
 });
